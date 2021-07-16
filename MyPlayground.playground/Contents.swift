@@ -26,3 +26,29 @@ let text = """
             이것은 매우 긴 텍스트 입니다!
            """
 print(text)
+
+
+// collection
+
+var someInts = [Int]()
+print(someInts.count)
+
+var threeDoubles = Array(repeating: 0.0, count: 3)
+var anotherThreeDoubles = Array(repeating: 2.5, count: 3)
+var arr = threeDoubles + anotherThreeDoubles
+print(arr)
+
+var shoppingList: [String] = ["Eggs", "Milk"]
+var shoppingList2 = ["Eggs", "Milk"]
+
+shoppingList.append("Four")
+
+shoppingList.insert("Maple Syrup", at:0)
+
+print(shoppingList)
+
+var favoriteGenres: Set<String> = ["Rock", "Classical", "Hip hop", "Rock"]
+
+print(favoriteGenres)
+
+var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
