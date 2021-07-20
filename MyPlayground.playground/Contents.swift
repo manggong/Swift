@@ -52,3 +52,14 @@ var favoriteGenres: Set<String> = ["Rock", "Classical", "Hip hop", "Rock"]
 print(favoriteGenres)
 
 var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+
+func printAndCount(string: String) -> Int {
+    print(string)
+    return string.count
+}
+func printWithoutCounting(string: String) {
+    let test = printAndCount(string: string)
+    print(test)
+}
+printAndCount(string: "hello, world")
+printWithoutCounting(string: "hello, world")
