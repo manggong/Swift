@@ -63,3 +63,10 @@ func printWithoutCounting(string: String) {
 }
 printAndCount(string: "hello, world")
 printWithoutCounting(string: "hello, world")
+
+// closure 콜백 같음
+
+let names2 = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+
+// {} 안에 리턴 넣고, $0로 인자 표현 가능
+var reversedNames = names.sorted { $0 > $1 }
