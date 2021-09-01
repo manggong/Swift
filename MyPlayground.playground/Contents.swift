@@ -70,3 +70,30 @@ let names2 = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 
 // {} 안에 리턴 넣고, $0로 인자 표현 가능
 var reversedNames = names.sorted { $0 > $1 }
+
+struct BasicInfo {
+    var firstInfo = 1
+    var secondInfo = 2
+}
+
+var infoInfo = BasicInfo()
+
+print(infoInfo.firstInfo)
+
+class BasicClass {
+    var name = "kim"
+    var age = 27
+    
+    deinit {
+        print("클래스 뿅!")
+    }
+}
+
+var thisIsClass: BasicClass? = BasicClass()
+
+thisIsClass = nil
+print(thisIsClass)
+
+
+
+
