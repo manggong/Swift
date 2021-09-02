@@ -92,8 +92,14 @@ class BasicClass {
 var thisIsClass: BasicClass? = BasicClass()
 
 thisIsClass = nil
-print(thisIsClass)
+//print(thisIsClass)
 
+let names1: [String] = ["kim", "yang", "chol", "min"]
 
+let reversed: [String] = names1.sorted{(first: String, second: String) -> Bool in
+    return first > second
+}
 
+print(reversed)
+// 책 읽어야지 ㅎㅎ
 
