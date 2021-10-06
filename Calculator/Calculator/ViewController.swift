@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet holder: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
