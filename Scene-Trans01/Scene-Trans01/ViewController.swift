@@ -8,15 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func moveNextPage(_ sender: Any) {
     
-        let uvc = self.storyboard!.instantiateViewController(identifier: "SecondVC")
+    @IBAction func moveNextPage(_ sender: Any) {
+        
+        guard let uvc = self.storyboard?.instantiateViewController(identifier: "SecondVC") else {
+            return
+        }
         
         uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         

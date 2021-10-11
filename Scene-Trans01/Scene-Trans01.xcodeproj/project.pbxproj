@@ -16,6 +16,7 @@
 		B9D1073727140D370092771A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D1073527140D370092771A /* LaunchScreen.storyboard */; };
 		B9D1074227140D380092771A /* Scene_Trans01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D1074127140D380092771A /* Scene_Trans01Tests.swift */; };
 		B9D1074D27140D380092771A /* Scene_Trans01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D1074C27140D380092771A /* Scene_Trans01UITests.swift */; };
+		B9D1075E2714139B0092771A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D1075D2714139B0092771A /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B9D1074827140D380092771A /* Scene-Trans01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scene-Trans01UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D1074C27140D380092771A /* Scene_Trans01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene_Trans01UITests.swift; sourceTree = "<group>"; };
 		B9D1074E27140D380092771A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9D1075D2714139B0092771A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				B9D1073527140D370092771A /* LaunchScreen.storyboard */,
 				B9D1073827140D370092771A /* Info.plist */,
 				B9D1073027140D2D0092771A /* Scene_Trans01.xcdatamodeld */,
+				B9D1075D2714139B0092771A /* SecondViewController.swift */,
 			);
 			path = "Scene-Trans01";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				B9D1073227140D2D0092771A /* Scene_Trans01.xcdatamodeld in Sources */,
 				B9D1072C27140D2D0092771A /* ViewController.swift in Sources */,
 				B9D1072827140D2D0092771A /* AppDelegate.swift in Sources */,
+				B9D1075E2714139B0092771A /* SecondViewController.swift in Sources */,
 				B9D1072A27140D2D0092771A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
