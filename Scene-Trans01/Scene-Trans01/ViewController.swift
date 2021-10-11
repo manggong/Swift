@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func moveNextPage(_ sender: Any) {
+    
+        let uvc = self.storyboard!.instantiateViewController(identifier: "SecondVC")
+        
+        uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        
+        self.present(uvc, animated: true)
     }
     
 }
