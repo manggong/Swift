@@ -14,6 +14,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBOutlet weak var uiTitle01: UILabel!
+    
+    @IBAction func clickBtn01(_ sender: Any) {
+    }
+    @IBOutlet weak var uiTitle02: UILabel!
+    @IBAction func clickBtn02(_ sender: Any) {
+    }
 }
 
