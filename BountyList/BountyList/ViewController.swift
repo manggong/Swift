@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // 이벤트 액션
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("-->\(indexPath)")
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
 
 }
