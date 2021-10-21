@@ -11,6 +11,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     let nameList = ["brook", "chopper", "franky", "nami", "luffy", "robin", "sanji", "zoro"]
     let bountyList = [3300000, 50, 440000000, 300000000, 160000000, 80000000, 77000000, 120000000]
+    
+    // 세그웨이가 수행되기 이전에 수행 됨
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            let vc = segue.destination as? DetailViewController
+            if let index = sender as? Int {
+                vc?.name = nameList[index]
+                vc?.bounty = bountyList[index]
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // 이벤트 액션
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetail", sender: nil)
+        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
     }
 
 }
