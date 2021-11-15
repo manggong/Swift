@@ -15,6 +15,8 @@
 		B9FB4A8527427F5200919BBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9FB4A8327427F5200919BBB /* LaunchScreen.storyboard */; };
 		B9FB4A9027427F5200919BBB /* MyMovieChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB4A8F27427F5200919BBB /* MyMovieChartTests.swift */; };
 		B9FB4A9B27427F5300919BBB /* MyMovieChartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB4A9A27427F5300919BBB /* MyMovieChartUITests.swift */; };
+		B9FB4AAC274282FE00919BBB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB4AAB274282FE00919BBB /* ListViewController.swift */; };
+		B9FB4AB1274285DB00919BBB /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FB4AB0274285DB00919BBB /* MovieVO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B9FB4A9627427F5200919BBB /* MyMovieChartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMovieChartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FB4A9A27427F5300919BBB /* MyMovieChartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMovieChartUITests.swift; sourceTree = "<group>"; };
 		B9FB4A9C27427F5300919BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9FB4AAB274282FE00919BBB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		B9FB4AB0274285DB00919BBB /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				B9FB4A7A27427F4500919BBB /* SceneDelegate.swift */,
 				B9FB4A7C27427F4500919BBB /* ViewController.swift */,
 				B9FB4A7E27427F4500919BBB /* Main.storyboard */,
+				B9FB4AB0274285DB00919BBB /* MovieVO.swift */,
+				B9FB4AAB274282FE00919BBB /* ListViewController.swift */,
 				B9FB4A8127427F5200919BBB /* Assets.xcassets */,
 				B9FB4A8327427F5200919BBB /* LaunchScreen.storyboard */,
 				B9FB4A8627427F5200919BBB /* Info.plist */,
@@ -260,7 +266,9 @@
 			files = (
 				B9FB4A7D27427F4500919BBB /* ViewController.swift in Sources */,
 				B9FB4A7927427F4500919BBB /* AppDelegate.swift in Sources */,
+				B9FB4AAC274282FE00919BBB /* ListViewController.swift in Sources */,
 				B9FB4A7B27427F4500919BBB /* SceneDelegate.swift in Sources */,
+				B9FB4AB1274285DB00919BBB /* MovieVO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
