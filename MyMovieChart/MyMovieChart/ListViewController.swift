@@ -9,39 +9,43 @@ import UIKit
 
 class ListViewController: UITableViewController {
     
-    var list = [MovieVO]()
+    var dataset = [
+        ("Dark knight", "This is Dark knight", "2008-09-04", 8.95),
+        ("Avengers", "This is Avengers", "2008-09-04", 8.95),
+        ("Joker", "This is Joker", "2008-09-04", 8.95)
+    ]
+    
+    lazy var list: [MovieVO] = {
+        var datalist = [MovieVO]()
+        for (title, desc, opendate, rating) in self.dataset {
+            let mvo = MovieVO()
+            mvo.title = title
+            mvo.description = desc
+            mvo.opendate = opendate
+            mvo.rating = rating
+            
+            datalist.append(mvo)
+        }
+        return datalist
+    }()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        var mvo = MovieVO()
-        mvo.title = "Dark knight"
-        mvo.description = "This is dark knight"
-        mvo.opendate = "2008-09-04"
-        mvo.rating = 8.95
-        self.list.append(mvo)
-        
-        mvo = MovieVO()
-        mvo.title = "Avengers"
-        mvo.description = "This is Avengers"
-        mvo.opendate = "2008-09-04"
-        mvo.rating = 8.95
-        self.list.append(mvo)
-        
-        mvo = MovieVO()
-        mvo.title = "Joker"
-        mvo.description = "This is Joker"
-        mvo.opendate = "2008-09-04"
-        mvo.rating = 8.95
-        self.list.append(mvo)
     }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.list.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let row = self.list[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell")!
+        cell.textLabel?.text = row.title
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("선택된 행은\(indexPath.row)번째 입니다.")
     }
 
 }
