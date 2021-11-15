@@ -40,8 +40,17 @@ class ListViewController: UITableViewController {
         
         let row = self.list[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell")!
-        cell.textLabel?.text = row.title
-        cell.detailTextLabel?.text = row.description
+        
+        let title = cell.viewWithTag(101) as? UILabel
+        let desc = cell.viewWithTag(102) as? UILabel
+        let opendate = cell.viewWithTag(103) as? UILabel
+        let rating = cell.viewWithTag(104) as? UILabel
+        
+        title?.text = row.title
+        desc?.text = row.description
+        opendate?.text = row.opendate
+        rating?.text = "\(row.rating!)"
+        
         return cell
     }
     
