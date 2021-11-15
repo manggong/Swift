@@ -41,6 +41,7 @@ class ListViewController: UITableViewController {
         let row = self.list[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell")!
         cell.textLabel?.text = row.title
+        cell.detailTextLabel?.text = row.description
         return cell
     }
     
