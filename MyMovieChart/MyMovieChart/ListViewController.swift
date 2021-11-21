@@ -9,14 +9,29 @@ import UIKit
 
 class ListViewController: UITableViewController {
     
+    @IBOutlet weak var moreBtn: UIButton!
+    
+    var page = 1
     lazy var list: [MovieVO] = {
         var datalist = [MovieVO]()
         return datalist
     }()
-
-    override func viewDidLoad() {
+ 
+    @IBAction func more(_ sender: Any) {
         
-        let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=1&count=10&genreId=&order=releasedateasc"
+        self.page += 1
+        self.callMovieAPI()
+        self.tableView.reloadData()
+        
+    }
+    
+    override func viewDidLoad() {
+        self.callMovieAPI()
+    }
+    
+    func callMovieAPI() {
+        
+        let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=\(self.page)&count=10&genreId=&order=releasedateasc"
         let apiURI: URL! = URL(string: url)
         let apiData = try! Data(contentsOf: apiURI)
         let log = NSString(data: apiData, encoding: String.Encoding.utf8.rawValue) ?? ""
@@ -29,6 +44,7 @@ class ListViewController: UITableViewController {
             let hoppin = apiDictionary["hoppin"] as! NSDictionary
             let movies = hoppin["movies"] as! NSDictionary
             let movie = movies["movie"] as! NSArray
+            let totalCount = (hoppin["totalCount"] as? NSString)!.integerValue
             
             for row in movie {
                 let r = row as! NSDictionary
@@ -41,12 +57,15 @@ class ListViewController: UITableViewController {
                 mvo.rating = ((r["ratingAverage"] as! NSString).doubleValue)
                 
                 self.list.append(mvo)
+                
+                if(self.list.count >= totalCount) {
+                    self.moreBtn.isHidden = true
+                }
                
             }
         } catch  {
             
         }
-        
         
     }
     
