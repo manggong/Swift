@@ -75,8 +75,8 @@ class ListViewController: UITableViewController {
         print("선택된 행은\(indexPath.row)번째 입니다.")
     }
     
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
 
 }
