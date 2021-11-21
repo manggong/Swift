@@ -9,35 +9,43 @@ import UIKit
 
 class ListViewController: UITableViewController {
     
-    var dataset = [
-        ("Dark knight", "This is Dark knight", "2008-09-04", 8.95, "darknight.jpg"),
-        ("Avengers", "This is Avengers", "2008-09-04", 8.95, "rain.jpg"),
-        ("Joker", "This is Joker", "2008-09-04", 8.95, "secret.jpg")
-    ]
-    
     lazy var list: [MovieVO] = {
         var datalist = [MovieVO]()
-        for (title, desc, opendate, rating, thumbnail) in self.dataset {
-            let mvo = MovieVO()
-            mvo.title = title
-            mvo.description = desc
-            mvo.opendate = opendate
-            mvo.rating = rating
-            mvo.thumbnail = thumbnail
-            
-            datalist.append(mvo)
-        }
         return datalist
     }()
 
     override func viewDidLoad() {
         
-//        let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=1&count=10&genreId=&order=releasedateasc"
-//        let apiURI: URL! = URL(string: url)
-//        let apiData = try! Data(contentsOf: apiURI)
-//        let log = NSString(data: apiData, encoding: String.Encoding.utf8.rawValue) ?? ""
-//
-//        NSLog("API Result=\(log)")
+        let url = "http://swiftapi.rubypaper.co.kr:2029/hoppin/movies?version=1&page=1&count=10&genreId=&order=releasedateasc"
+        let apiURI: URL! = URL(string: url)
+        let apiData = try! Data(contentsOf: apiURI)
+        let log = NSString(data: apiData, encoding: String.Encoding.utf8.rawValue) ?? ""
+
+        NSLog("API Result=\(log)")
+        
+        do {
+            let apiDictionary = try JSONSerialization.jsonObject(with: apiData, options: []) as! NSDictionary
+            
+            let hoppin = apiDictionary["hoppin"] as! NSDictionary
+            let movies = hoppin["movies"] as! NSDictionary
+            let movie = movies["movie"] as! NSArray
+            
+            for row in movie {
+                let r = row as! NSDictionary
+                let mvo = MovieVO()
+                
+                mvo.title = r["title"] as? String
+                mvo.description = r["genreNames"] as? String
+                mvo.thumbnail = r["thumbnailImage"] as? String
+                mvo.detail = r["linkUrl"] as? String
+                mvo.rating = ((r["ratingAverage"] as! NSString).doubleValue)
+                
+                self.list.append(mvo)
+               
+            }
+        } catch  {
+            
+        }
         
         
     }
@@ -55,13 +63,20 @@ class ListViewController: UITableViewController {
         cell.desc?.text = row.description
         cell.opendate?.text = row.opendate
         cell.rating?.text = "\(row.rating!)"
-        cell.thumbnail.image = UIImage(named: row.thumbnail!)
+        
+        let url: URL! = URL(string: row.thumbnail!)
+        let imageData = try! Data(contentsOf: url)
+        cell.thumbnail.image = UIImage(data: imageData)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("선택된 행은\(indexPath.row)번째 입니다.")
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
     }
 
 }
