@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90D1FCE274BB6C7004BA670 /* Listbullets.png in Resources */ = {isa = PBXBuildFile; fileRef = B90D1FCC274BB6C7004BA670 /* Listbullets.png */; };
+		B90D1FCF274BB6C7004BA670 /* Trailer.png in Resources */ = {isa = PBXBuildFile; fileRef = B90D1FCD274BB6C7004BA670 /* Trailer.png */; };
+		B90D1FD4274BB985004BA670 /* TheaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90D1FD3274BB985004BA670 /* TheaterCell.swift */; };
+		B90D1FD9274BBAEB004BA670 /* TheaterListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90D1FD8274BBAEB004BA670 /* TheaterListController.swift */; };
 		B96FE95A2746669300D23915 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96FE9592746669300D23915 /* MovieCell.swift */; };
 		B98ECDD8274A2A4A004CC69A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98ECDD7274A2A4A004CC69A /* DetailViewController.swift */; };
 		B9C556BB274670530093BF76 /* rain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9C556B8274670530093BF76 /* rain.jpg */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B90D1FCC274BB6C7004BA670 /* Listbullets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Listbullets.png; path = "../../../../../../Downloads/기본편공식예제/TabIcon/Listbullets.png"; sourceTree = "<group>"; };
+		B90D1FCD274BB6C7004BA670 /* Trailer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Trailer.png; path = "../../../../../../Downloads/기본편공식예제/TabIcon/Trailer.png"; sourceTree = "<group>"; };
+		B90D1FD3274BB985004BA670 /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
+		B90D1FD8274BBAEB004BA670 /* TheaterListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListController.swift; sourceTree = "<group>"; };
 		B96FE9592746669300D23915 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		B98ECDD7274A2A4A004CC69A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B9C556B8274670530093BF76 /* rain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rain.jpg; path = "../../../../../../Downloads/기본편공식예제/Thumbnail/rain.jpg"; sourceTree = "<group>"; };
@@ -91,6 +99,8 @@
 		B9C556B727466FC40093BF76 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B90D1FCC274BB6C7004BA670 /* Listbullets.png */,
+				B90D1FCD274BB6C7004BA670 /* Trailer.png */,
 				B9C556BA274670530093BF76 /* darknight.jpg */,
 				B9C556B8274670530093BF76 /* rain.jpg */,
 				B9C556B9274670530093BF76 /* secret.jpg */,
@@ -125,7 +135,9 @@
 				B9FB4A7827427F4500919BBB /* AppDelegate.swift */,
 				B9FB4A7A27427F4500919BBB /* SceneDelegate.swift */,
 				B9FB4A7E27427F4500919BBB /* Main.storyboard */,
+				B90D1FD8274BBAEB004BA670 /* TheaterListController.swift */,
 				B98ECDD7274A2A4A004CC69A /* DetailViewController.swift */,
+				B90D1FD3274BB985004BA670 /* TheaterCell.swift */,
 				B9FB4AB0274285DB00919BBB /* MovieVO.swift */,
 				B9FB4AAB274282FE00919BBB /* ListViewController.swift */,
 				B96FE9592746669300D23915 /* MovieCell.swift */,
@@ -257,6 +269,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90D1FCE274BB6C7004BA670 /* Listbullets.png in Resources */,
+				B90D1FCF274BB6C7004BA670 /* Trailer.png in Resources */,
 				B9C556BD274670530093BF76 /* darknight.jpg in Resources */,
 				B9FB4A8527427F5200919BBB /* LaunchScreen.storyboard in Resources */,
 				B9C556BB274670530093BF76 /* rain.jpg in Resources */,
@@ -288,7 +302,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9FB4A7927427F4500919BBB /* AppDelegate.swift in Sources */,
+				B90D1FD4274BB985004BA670 /* TheaterCell.swift in Sources */,
 				B96FE95A2746669300D23915 /* MovieCell.swift in Sources */,
+				B90D1FD9274BBAEB004BA670 /* TheaterListController.swift in Sources */,
 				B9FB4AAC274282FE00919BBB /* ListViewController.swift in Sources */,
 				B98ECDD8274A2A4A004CC69A /* DetailViewController.swift in Sources */,
 				B9FB4A7B27427F4500919BBB /* SceneDelegate.swift in Sources */,
