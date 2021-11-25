@@ -60,9 +60,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="평점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ge-U8-Om6">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ge-U8-Om6">
                                             <rect key="frame" x="306" y="40" width="57" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="IK3-SB-mSj"/>
+                                                <constraint firstAttribute="width" constant="57" id="Ns2-h8-rWm"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -73,6 +76,10 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9ge-U8-Om6" secondAttribute="bottom" constant="59" id="6yu-RU-lNQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="9ge-U8-Om6" secondAttribute="trailing" constant="51" id="I92-vU-k0P"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="desc" destination="oNs-kG-ZC1" id="AIz-8b-Fpe"/>
                                     <outlet property="opendate" destination="0li-Mc-deQ" id="3Cp-ua-b5l"/>
