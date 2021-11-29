@@ -1,4 +1,2 @@
 ### kkomkkom swift
 
-
-- git test
